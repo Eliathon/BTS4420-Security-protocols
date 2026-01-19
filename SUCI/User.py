@@ -17,7 +17,7 @@ if cmd==None:
 if cmd==CMD_CONCEAL:
     print("\nUser: Concealing a permanent identifier.")
     
-    # Loading the Home Pubic key.
+    # Loading the Home Public key.
     home_pub_key = load_public_key(PUB_PEM)
     
     # generate ephemeral key-pair
