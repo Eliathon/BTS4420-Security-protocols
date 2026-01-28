@@ -137,3 +137,16 @@ def add_padding(bytestr: bytes, length: int) -> bytes:
     assert bs_len<=length, "The bytestr exceeds the desired length: "+str(bs_len)
     zeroes = length-bs_len
     return bytestr + bytes(zeroes)
+
+
+                # SIKKERHETSPROTOKOLLER OBLIG 1C, UDP Config
+# Gir et felles seted å hente IP / porter fra
+UDP_IP = "127.0.0.1"    # lokal testing / localhost
+HOME_UDP_PORT = 5005    # Velg porter som ikke krasjer med andre ting
+USER_UDP_PORT = 5006
+
+SOCK_TIMEOUT = 10        # Socket-timeout (i sekunder)
+DGRAM_BUFF = 2048       # Maks størrelse på et datagram for SUCI. 2048 er nok
+
+HOME_ADDR = (UDP_IP, HOME_UDP_PORT)
+USER_ADDR = (UDP_IP, USER_UDP_PORT)
