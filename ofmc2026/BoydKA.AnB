@@ -1,0 +1,33 @@
+Protocol: BoydKA
+
+Types:
+  Agent A,B,s;
+  Number NA,NB;
+  Symmetric_key KS;
+  Function sk,mac,kdf
+
+Knowledge:
+  A: A,B,s,sk(A,s),mac,kdf;
+  B: A,B,s,sk(B,s),mac,kdf;
+  s: A,B,s,sk(A,s),sk(B,s),mac,kdf
+
+Actions:
+
+# 1) A -> s : A,B,NA
+A->s: A,B,NA
+
+# 2) s -> B : ticket_for_B , ticket_for_A , NA
+s->B: {|A,B,KS|}sk(B,s), {|A,B,KS|}sk(A,s), NA
+
+# 3) B -> A : ticket_for_A , NB , MAC(KS,NA,NB)
+B->A: {|A,B,KS|}sk(A,s), NB, mac(KS,NA,NB)
+
+# 4) A -> B : MAC(KS,NB)
+A->B: mac(KS,NB)
+
+Goals:
+
+KS secret between A,B,s
+kdf(KS,NA,NB) secret between A,B
+A authenticates B on mac(KS,NA,NB)
+B authenticates A on mac(KS,NB)
