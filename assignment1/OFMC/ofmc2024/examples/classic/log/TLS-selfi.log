@@ -1,0 +1,29 @@
+Open-Source Fixedpoint Model-Checker version 2023
+INPUT:
+   TLS-selfi.AnB
+SUMMARY:
+  ATTACK_FOUND
+GOAL:
+  weak_auth
+BACKEND:
+  Open-Source Fixedpoint Model-Checker version 2023
+STATISTICS:
+  visitedNodes: 6 nodes
+  depth: 3 plies
+
+ATTACK TRACE:
+(x501,1) -> i: x501,x502,N1(1)
+i -> (x501,1): x502,x501,N1(1)
+(x501,1) -> i: x502,x501,N2(2),h(h(exp(exp(g,sk(x502)),sk(x501)),N1(1),N2(2)),N1(1),N2(2))
+i -> (x501,1): x501,x502,N2(2),h(h(exp(exp(g,sk(x501)),sk(x502)),N1(1),N2(2)),N1(1),N2(2))
+(x501,1) -> i: x501,x502,h(h(exp(exp(g,sk(x501)),sk(x502)),N1(1),N2(2)),N1(1),N2(2),h(h(exp(exp(g,sk(x501)),sk(x502)),N1(1),N2(2)),N1(1),N2(2)))
+
+
+% Reached State:
+% 
+% request(x501,x502,pABN2,N2(2),1)
+% state_rA(x501,2,h,exp(exp(g,sk(x501)),sk(x502)),x502,N1(1),x501,x502,N1(1),h(h(exp(exp(g,sk(x501)),sk(x502)),N1(1),N2(2)),N1(1),N2(2)),N2(2),x501,x502,N2(2),h(h(exp(exp(g,sk(x501)),sk(x502)),N1(1),N2(2)),N1(1),N2(2)),x501,x502,h(h(exp(exp(g,sk(x501)),sk(x502)),N1(1),N2(2)),N1(1),N2(2),h(h(exp(exp(g,sk(x501)),sk(x502)),N1(1),N2(2)),N1(1),N2(2))),1)
+% state_rB(x501,1,h,exp(exp(g,sk(x502)),sk(x501)),x502,N1(1),x502,x501,N1(1),N2(2),x502,x501,N2(2),h(h(exp(exp(g,sk(x502)),sk(x501)),N1(1),N2(2)),N1(1),N2(2)),1)
+% witness(x501,x502,pBAN1,N1(1))
+% witness(x501,x502,pABN2,N2(2))
+

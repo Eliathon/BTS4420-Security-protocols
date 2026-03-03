@@ -1,0 +1,29 @@
+Protocol: H530fix # Bounded-verified
+
+Types: Agent A,B,s;
+       Number X,Y,g,M;
+       Format f1,f2,f3,f4,f5;
+       Function sk,mac
+
+Knowledge: A: A,s,sk(A,s),B,g,mac;
+	   B: B,s,sk(B,s),g,mac;
+	   s: A,B,s,sk,g,mac;
+
+Actions:
+A->B: f1(A,B,exp(g,X)),mac(sk(A,s),f1(A,B,exp(g,X)))
+B->s: f2(f1(A,B,exp(g,X)),mac(sk(A,s),f1(A,B,exp(g,X))),
+	 B,exp(g,X),exp(g,Y)),
+      mac(sk(B,s),f2(f1(A,B,exp(g,X)),mac(sk(A,s),f1(A,B,exp(g,X))),
+		     B,exp(g,X),exp(g,Y)))
+s->B: f4(B,A,exp(g,X)),mac(sk(A,s),f3(B,exp(g,X),exp(g,Y))),
+      mac(sk(B,s),f4(B,A,exp(g,X)),mac(sk(A,s),f3(B,exp(g,X),exp(g,Y))))
+B->A: f5(B,A,exp(g,Y),mac(sk(A,s),f3(B,exp(g,X),exp(g,Y)))),
+      mac(exp(exp(g,X),Y),f5(B,A,exp(g,Y),mac(sk(A,s),f3(B,exp(g,X),exp(g,Y)))))
+A->B: {|M|}exp(exp(g,X),Y)
+
+Goals:
+B authenticates A on M
+M secret between A,B
+
+
+

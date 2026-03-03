@@ -1,0 +1,28 @@
+Protocol: KeyEx
+
+# flawed protocol from the lexture---mind how close it is 
+# to the secure KeyEx6.AnB
+
+Types:
+  Agent A,B,s;
+  Symmetric_key KAB;
+  Number NB,responder;
+  Function sk,pre
+
+Knowledge:
+  A: A,B,s,sk(A,s),pre;
+  B: A,B,s,sk(B,s),pre;
+  s: A,B,s,sk(A,s),sk(B,s),pre
+
+Actions:
+
+B->A: B,A,NB
+A->s: A,B,NA,NB
+s->A: {| KAB,B, NA, {| KAB,A,NB,s |}sk(B,s) |}sk(A,s)
+A->B: A, {| KAB,A,NB,s |}sk(B,s)
+Goals: 
+
+A authenticates s on KAB,B
+B authenticates s on KAB,A
+KAB secret between A,B,s
+#sk(A,s) secret between A,s

@@ -1,0 +1,24 @@
+Protocol: selfi  # Bounded-verified
+
+# This a version where we do assume sk(A,B)!=sk(B,A)
+
+Types: Agent A,B;
+       Number N1,N2;
+       Function sk,h
+
+Knowledge: A: A,B,sk(A,B),h;
+	   B: A,B,sk(A,B),h;
+
+Actions:
+
+A->B: A,B,N1
+B->A: A,B,N2,h(h(sk(A,B),N1,N2),(N1,N2))
+A->B: A,B,h(h(sk(A,B),N1,N2),(N1,N2,h(h(sk(A,B),N1,N2),(N1,N2))))
+
+Goals:
+
+B authenticates A on N1
+A authenticates B on N2
+
+
+

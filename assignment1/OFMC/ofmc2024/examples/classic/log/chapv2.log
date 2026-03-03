@@ -1,0 +1,29 @@
+Open-Source Fixedpoint Model-Checker version 2023
+INPUT:
+   chapv2.AnB
+SUMMARY:
+  ATTACK_FOUND
+GOAL:
+  guesswhat
+BACKEND:
+  Open-Source Fixedpoint Model-Checker version 2023
+STATISTICS:
+  visitedNodes: 1 nodes
+  depth: 1 plies
+
+ATTACK TRACE:
+i -> (x20,1): x205
+(x20,1) -> i: h(pw(x20,x25),x205)
+i -> (i,17): h(guessPW,x205)
+i -> (i,17): h(guessPW,x205)
+
+
+% Reached State:
+% 
+% guessChal(h(guessPW,x205),guessSecrecyset(x20,1,ppwAB),i)
+% witness(x20,x25,pBANB,x205)
+% state_rA(x20,1,h,pw(x20,x25),x25,x205,h(pw(x20,x25),x205),1)
+% contains(guessSecrecyset(x20,1,ppwAB),x20)
+% contains(guessSecrecyset(x20,1,ppwAB),x25)
+% state_rB(x26,0,h,pw(x27,x26),x27,1)
+

@@ -1,0 +1,24 @@
+3,10c3,12
+< INPUT:
+<    h530.AnB
+< SUMMARY:
+<   ATTACK_FOUND
+< GOAL:  weak_auth
+< BACKEND: Open-Source Fixedpoint Model-Checker version 2012b
+< STATISTICS:
+<   TIME 3761 ms
+---
+> 
+> SUMMARY
+>   UNSAFE
+> PROTOCOL
+>   h530.AnB
+> GOAL
+>   weak_auth
+> BACKEND
+>   OFMC 2012b
+> STATISTICS
+14c16
+< ATTACK TRACE:
+---
+> ATTACK TRACE

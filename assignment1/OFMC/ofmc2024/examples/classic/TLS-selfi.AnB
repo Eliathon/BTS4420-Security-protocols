@@ -1,0 +1,23 @@
+Protocol: Selfi 
+
+Types: Agent A,B;
+       Number N1,N2;
+       Function sk,h
+
+Knowledge: A: A,B,exp(exp(g,sk(A)),sk(B)),h;
+	   B: A,B,exp(exp(g,sk(A)),sk(B)),h;
+
+Actions:
+
+A->B: A,B,N1
+B->A: A,B,N2,  h(h(exp(exp(g,sk(A)),sk(B)),N1,N2),(N1,N2))
+A->B: A,B,   h(h(exp(exp(g,sk(A)),sk(B)),N1,N2),(N1,N2,
+               h(h(exp(exp(g,sk(A)),sk(B)),N1,N2),N1,N2)))
+
+Goals:
+
+B authenticates A on N1
+A authenticates B on N2
+
+
+

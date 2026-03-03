@@ -1,0 +1,40 @@
+Open-Source Fixedpoint Model-Checker version 2023
+Verified for 1 sessions
+INPUT:
+   h530.AnB
+SUMMARY:
+  ATTACK_FOUND
+GOAL:
+  weak_auth
+BACKEND:
+  Open-Source Fixedpoint Model-Checker version 2023
+STATISTICS:
+  visitedNodes: 2553 nodes
+  depth: 6 plies
+
+ATTACK TRACE:
+(x802,1) -> i: f1,x802,x801,exp(g,X(1)),mac(sk(x802,s),f1,x802,x801,exp(g,X(1)))
+i -> (x801,1): f1,x802,x801,g,x306
+(x801,1) -> i: f2,f1,x802,x801,g,x306,x801,g,exp(g,Y(2)),mac(sk(x801,s),f2,f1,x802,x801,g,x306,x801,g,exp(g,Y(2)))
+i -> (x801,2): f1,x802,x801,exp(g,X(1)),mac(sk(x802,s),f1,x802,x801,exp(g,X(1)))
+(x801,2) -> i: f2,f1,x802,x801,exp(g,X(1)),mac(sk(x802,s),f1,x802,x801,exp(g,X(1))),x801,exp(g,X(1)),exp(g,Y(3)),mac(sk(x801,s),f2,f1,x802,x801,exp(g,X(1)),mac(sk(x802,s),f1,x802,x801,exp(g,X(1))),x801,exp(g,X(1)),exp(g,Y(3)))
+i -> (s,1): f2,f1,x802,x801,exp(g,X(1)),mac(sk(x802,s),f1,x802,x801,exp(g,X(1))),x801,exp(g,X(1)),exp(g,Y(3)),mac(sk(x801,s),f2,f1,x802,x801,exp(g,X(1)),mac(sk(x802,s),f1,x802,x801,exp(g,X(1))),x801,exp(g,X(1)),exp(g,Y(3)))
+(s,1) -> i: f4,x801,x802,mac(sk(x802,s),f3,x801,exp(g,X(1)),exp(g,Y(3))),mac(sk(x801,s),f4,x801,x802,mac(sk(x802,s),f3,x801,exp(g,X(1)),exp(g,Y(3))))
+i -> (x801,1): f4,x801,x802,mac(sk(x802,s),f3,x801,exp(g,X(1)),exp(g,Y(3))),mac(sk(x801,s),f4,x801,x802,mac(sk(x802,s),f3,x801,exp(g,X(1)),exp(g,Y(3))))
+(x801,1) -> i: f5,x801,x802,exp(g,Y(2)),mac(sk(x802,s),f3,x801,exp(g,X(1)),exp(g,Y(3))),mac(exp(g,Y(2)),f5,x801,x802,exp(g,Y(2)),mac(sk(x802,s),f3,x801,exp(g,X(1)),exp(g,Y(3))))
+i -> (x801,1): {|x709|}_(exp(g,Y(2)))
+
+
+% Reached State:
+% 
+% request(x801,x802,pBAM,x709,1)
+% secrets(x709,secrecyset(x801,1,pM),i)
+% contains(secrecyset(x801,1,pM),x802)
+% contains(secrecyset(x801,1,pM),x801)
+% state_rB(x801,3,mac,g,sk(x801,s),s,f5,f4,f3,f2,f1,x306,g,x802,f1,x802,x801,g,x306,Y(2),f2,f1,x802,x801,g,x306,x801,g,exp(g,Y(2)),mac(sk(x801,s),f2,f1,x802,x801,g,x306,x801,g,exp(g,Y(2))),mac(sk(x801,s),f2,f1,x802,x801,g,x306,x801,g,exp(g,Y(2))),exp(g,Y(2)),mac(sk(x801,s),f4,x801,x802,mac(sk(x802,s),f3,x801,exp(g,X(1)),exp(g,Y(3)))),mac(sk(x802,s),f3,x801,exp(g,X(1)),exp(g,Y(3))),f4,x801,x802,mac(sk(x802,s),f3,x801,exp(g,X(1)),exp(g,Y(3))),mac(sk(x801,s),f4,x801,x802,mac(sk(x802,s),f3,x801,exp(g,X(1)),exp(g,Y(3)))),f5,x801,x802,exp(g,Y(2)),mac(sk(x802,s),f3,x801,exp(g,X(1)),exp(g,Y(3))),mac(exp(g,Y(2)),f5,x801,x802,exp(g,Y(2)),mac(sk(x802,s),f3,x801,exp(g,X(1)),exp(g,Y(3)))),mac(exp(g,Y(2)),f5,x801,x802,exp(g,Y(2)),mac(sk(x802,s),f3,x801,exp(g,X(1)),exp(g,Y(3)))),x709,{|x709|}_(exp(g,Y(2))),1)
+% state_rA(x36,0,mac,g,x38,sk(x36,s),s,f5,f4,f3,f2,f1,2)
+% state_rs(s,0,mac,g,sk,x40,x41,f5,f4,f3,f2,f1,2)
+% state_rB(x801,1,mac,g,sk(x801,s),s,f5,f4,f3,f2,f1,mac(sk(x802,s),f1,x802,x801,exp(g,X(1))),exp(g,X(1)),x802,f1,x802,x801,exp(g,X(1)),mac(sk(x802,s),f1,x802,x801,exp(g,X(1))),Y(3),f2,f1,x802,x801,exp(g,X(1)),mac(sk(x802,s),f1,x802,x801,exp(g,X(1))),x801,exp(g,X(1)),exp(g,Y(3)),mac(sk(x801,s),f2,f1,x802,x801,exp(g,X(1)),mac(sk(x802,s),f1,x802,x801,exp(g,X(1))),x801,exp(g,X(1)),exp(g,Y(3))),2)
+% state_rA(x802,1,mac,g,x801,sk(x802,s),s,f5,f4,f3,f2,f1,X(1),f1,x802,x801,exp(g,X(1)),mac(sk(x802,s),f1,x802,x801,exp(g,X(1))),1)
+% state_rs(s,1,mac,g,sk,x801,x802,f5,f4,f3,f2,f1,mac(sk(x801,s),f2,f1,x802,x801,exp(g,X(1)),mac(sk(x802,s),f1,x802,x801,exp(g,X(1))),x801,exp(g,X(1)),exp(g,Y(3))),exp(g,Y(3)),exp(g,X(1)),mac(sk(x802,s),f1,x802,x801,exp(g,X(1))),f2,f1,x802,x801,exp(g,X(1)),mac(sk(x802,s),f1,x802,x801,exp(g,X(1))),x801,exp(g,X(1)),exp(g,Y(3)),mac(sk(x801,s),f2,f1,x802,x801,exp(g,X(1)),mac(sk(x802,s),f1,x802,x801,exp(g,X(1))),x801,exp(g,X(1)),exp(g,Y(3))),f4,x801,x802,mac(sk(x802,s),f3,x801,exp(g,X(1)),exp(g,Y(3))),mac(sk(x801,s),f4,x801,x802,mac(sk(x802,s),f3,x801,exp(g,X(1)),exp(g,Y(3)))),1)
+
