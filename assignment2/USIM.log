@@ -1,0 +1,1024 @@
+
+USIM starting: This is *not* the complete version.
+
+==========<<<  New DEMO-AKA run  >>>==================================================
+
+==> State: INIT
+USIM initialized (test set: 1):
+  IMSI: 00000000 00000000 00000000 00000001
+  K   : 465b5ce8 b199b49f aa5f0a2e e238a6bc
+  OPc : cd63cb71 954a9f4e 48a5994e 37a02baf
+
+==> State: SEND_ID
+Sending 'SendIdentity':
+  IMSI: 00000000 00000000 00000000 00000001
+
+==> State: WAIT_FOR_CHALLENGE
+Received 'Challenge':
+  RAND: 23553cbe 9637a89d 218ae64d ae47bf35
+  AUTN: 00000000 0000b9b9 00000000 00000000
+    MSQN: 00000000 0000
+    AMF : b9b9
+    MACA: 00000000 00000000 
+
+Computed values:
+  MAC-A : 00000000 00000000 
+  RES   : 00000000 00000000 
+  CK    : 00000000 00000000 00000000 00000000
+  IK    : 00000000 00000000 00000000 00000000
+  AK    : 00000000 0000
+
+==> State: SEND_RESPONSE
+Sending 'Response':
+  RES: 00000000 00000000 
+
+==> State: WAIT_FOR_TMSI
+Received 'AssignTMSI':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 6b6f8ca9 70fb20af 2dce855a 4bf7c98c
+  ciphertext: e8602c0c d590e4cd 88b8d9c8 fb00c49d 831a534b 
+  aad was   : 00000000 00000000 00000000 00000001
+  decr.TMSI : 00000001 
+
+==> State: SEND_TMSI_ACK
+Sending 'AssignTMSI-ack':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 4416a028 929a1982 df6a0c7a 6f5c0861
+  ciphertext: 8f21b97f 4a30f6f9 0c1011ae 7f6c98bf ef2380e5 
+  aad was   : 00000000 00000000 00000000 00000001
+  decr.TMSI : 00000001 
+
+==> State: DONE
+
+DEMO-AKA sequence successfully completed on USIM side!
+
+==========<<<  New DEMO-AKA run  >>>==================================================
+
+==> State: INIT
+USIM initialized (test set: 2):
+  IMSI: 00000000 00000000 00000000 00000002
+  K   : 465b5ce8 b199b49f aa5f0a2e e238a6bc
+  OPc : cd63cb71 954a9f4e 48a5994e 37a02baf
+
+==> State: SEND_ID
+Sending 'SendIdentity':
+  IMSI: 00000000 00000000 00000000 00000002
+
+==> State: WAIT_FOR_CHALLENGE
+Received 'Challenge':
+  RAND: 23553cbe 9637a89d 218ae64d ae47bf35
+  AUTN: 00000000 0000b9b9 00000000 00000000
+    MSQN: 00000000 0000
+    AMF : b9b9
+    MACA: 00000000 00000000 
+
+Computed values:
+  MAC-A : 00000000 00000000 
+  RES   : 00000000 00000000 
+  CK    : 00000000 00000000 00000000 00000000
+  IK    : 00000000 00000000 00000000 00000000
+  AK    : 00000000 0000
+
+==> State: SEND_RESPONSE
+Sending 'Response':
+  RES: 00000000 00000000 
+
+==> State: WAIT_FOR_TMSI
+Received 'AssignTMSI':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : acda00d0 34c30ef8 58728e5c 651146ef
+  ciphertext: d8e9f2c8 6c0bb6e5 665c3506 3d98d833 2f7a1bdc 
+  aad was   : 00000000 00000000 00000000 00000002
+  decr.TMSI : 00000002 
+
+==> State: SEND_TMSI_ACK
+Sending 'AssignTMSI-ack':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : c23195de 8cf58fd5 e28eb1ff d1b0df27
+  ciphertext: 0e9878d4 67281046 904e4eab c4c5e9f6 0f298051 
+  aad was   : 00000000 00000000 00000000 00000002
+  decr.TMSI : 00000002 
+
+==> State: DONE
+
+DEMO-AKA sequence successfully completed on USIM side!
+
+==========<<<  New DEMO-AKA run  >>>==================================================
+
+==> State: INIT
+USIM initialized (test set: 3):
+  IMSI: 00000000 00000000 00000000 00000003
+  K   : fec86ba6 eb707ed0 8905757b 1bb44b8f
+  OPc : 1006020f 0a478bf6 b699f15c 062e42b3
+
+==> State: SEND_ID
+Sending 'SendIdentity':
+  IMSI: 00000000 00000000 00000000 00000003
+
+==> State: WAIT_FOR_CHALLENGE
+Received 'Challenge':
+  RAND: 9f7c8d02 1accf4db 213ccff0 c7f71a6a
+  AUTN: 00000000 0000725c 00000000 00000000
+    MSQN: 00000000 0000
+    AMF : 725c
+    MACA: 00000000 00000000 
+
+Computed values:
+  MAC-A : 00000000 00000000 
+  RES   : 00000000 00000000 
+  CK    : 00000000 00000000 00000000 00000000
+  IK    : 00000000 00000000 00000000 00000000
+  AK    : 00000000 0000
+
+==> State: SEND_RESPONSE
+Sending 'Response':
+  RES: 00000000 00000000 
+
+==> State: WAIT_FOR_TMSI
+Received 'AssignTMSI':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 2ed91e9e ca300083 63e60b71 c230c559
+  ciphertext: 52f2c61a 9837eb27 64b3d110 12d9cdbb a3b01f9b 
+  aad was   : 00000000 00000000 00000000 00000003
+  decr.TMSI : 00000003 
+
+==> State: SEND_TMSI_ACK
+Sending 'AssignTMSI-ack':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 38b59792 f5ac7965 3c82f887 3866fa34
+  ciphertext: 5d0f8eed f0c9ef25 06f31561 f8dd3fd2 fb6804e1 
+  aad was   : 00000000 00000000 00000000 00000003
+  decr.TMSI : 00000003 
+
+==> State: DONE
+
+DEMO-AKA sequence successfully completed on USIM side!
+
+==========<<<  New DEMO-AKA run  >>>==================================================
+
+==> State: INIT
+USIM initialized (test set: 4):
+  IMSI: 00000000 00000000 00000000 00000004
+  K   : 9e5944ae a94b8116 5c82fbf9 f32db751
+  OPc : a64a507a e1a2a98b b88eb421 0135dc87
+
+==> State: SEND_ID
+Sending 'SendIdentity':
+  IMSI: 00000000 00000000 00000000 00000004
+
+==> State: WAIT_FOR_CHALLENGE
+Received 'Challenge':
+  RAND: ce83dbc5 4ac0274a 157c17f8 0d017bd6
+  AUTN: 00000000 00009e09 00000000 00000000
+    MSQN: 00000000 0000
+    AMF : 9e09
+    MACA: 00000000 00000000 
+
+Computed values:
+  MAC-A : 00000000 00000000 
+  RES   : 00000000 00000000 
+  CK    : 00000000 00000000 00000000 00000000
+  IK    : 00000000 00000000 00000000 00000000
+  AK    : 00000000 0000
+
+==> State: SEND_RESPONSE
+Sending 'Response':
+  RES: 00000000 00000000 
+
+==> State: WAIT_FOR_TMSI
+Received 'AssignTMSI':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : aae22cd6 3a6ee31b d676443f 1fec2edf
+  ciphertext: 55246a85 1938e1b7 f01a941d abbd6d86 83889ef4 
+  aad was   : 00000000 00000000 00000000 00000004
+  decr.TMSI : 00000004 
+
+==> State: SEND_TMSI_ACK
+Sending 'AssignTMSI-ack':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 12231111 6f295e2b a75ac3fc bd08f2dc
+  ciphertext: 987877de 63049ab0 b139aaa7 b9ec33df 8b63b2dd 
+  aad was   : 00000000 00000000 00000000 00000004
+  decr.TMSI : 00000004 
+
+==> State: DONE
+
+DEMO-AKA sequence successfully completed on USIM side!
+
+==========<<<  New DEMO-AKA run  >>>==================================================
+
+==> State: INIT
+USIM initialized (test set: 5):
+  IMSI: 00000000 00000000 00000000 00000005
+  K   : 4ab1deb0 5ca6ceb0 51fc98e7 7d026a84
+  OPc : dcf07cbd 51855290 b92a07a9 891e523e
+
+==> State: SEND_ID
+Sending 'SendIdentity':
+  IMSI: 00000000 00000000 00000000 00000005
+
+==> State: WAIT_FOR_CHALLENGE
+Received 'Challenge':
+  RAND: 74b0cd60 31a1c833 9b2b6ce2 b8c4a186
+  AUTN: 00000000 00009f07 00000000 00000000
+    MSQN: 00000000 0000
+    AMF : 9f07
+    MACA: 00000000 00000000 
+
+Computed values:
+  MAC-A : 00000000 00000000 
+  RES   : 00000000 00000000 
+  CK    : 00000000 00000000 00000000 00000000
+  IK    : 00000000 00000000 00000000 00000000
+  AK    : 00000000 0000
+
+==> State: SEND_RESPONSE
+Sending 'Response':
+  RES: 00000000 00000000 
+
+==> State: WAIT_FOR_TMSI
+Received 'AssignTMSI':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : e502d67e 8c7850df ba08aa77 a6511718
+  ciphertext: ec805698 4a61f1f1 b5dbeaa8 1cb98625 7a3f9c7b 
+  aad was   : 00000000 00000000 00000000 00000005
+  decr.TMSI : 00000005 
+
+==> State: SEND_TMSI_ACK
+Sending 'AssignTMSI-ack':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 7d4f78eb e8bbbaeb 54a2aa1f e26e8222
+  ciphertext: 9850c014 479e57e8 036451bc ed0da468 e1c3b8fb 
+  aad was   : 00000000 00000000 00000000 00000005
+  decr.TMSI : 00000005 
+
+==> State: DONE
+
+DEMO-AKA sequence successfully completed on USIM side!
+
+==========<<<  New DEMO-AKA run  >>>==================================================
+
+==> State: INIT
+USIM initialized (test set: 6):
+  IMSI: 00000000 00000000 00000000 00000006
+  K   : 6c38a116 ac280c45 4f59332e e35c8c4f
+  OPc : 3803ef53 63b947c6 aaa225e5 8fae3934
+
+==> State: SEND_ID
+Sending 'SendIdentity':
+  IMSI: 00000000 00000000 00000000 00000006
+
+==> State: WAIT_FOR_CHALLENGE
+Received 'Challenge':
+  RAND: ee6466bc 96202c5a 557abbef f8babf63
+  AUTN: 00000000 00004464 00000000 00000000
+    MSQN: 00000000 0000
+    AMF : 4464
+    MACA: 00000000 00000000 
+
+Computed values:
+  MAC-A : 00000000 00000000 
+  RES   : 00000000 00000000 
+  CK    : 00000000 00000000 00000000 00000000
+  IK    : 00000000 00000000 00000000 00000000
+  AK    : 00000000 0000
+
+==> State: SEND_RESPONSE
+Sending 'Response':
+  RES: 00000000 00000000 
+
+==> State: WAIT_FOR_TMSI
+Received 'AssignTMSI':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 734169e0 a2c9b93e a8b799c4 815a7eab
+  ciphertext: 6f50d161 bb5502e6 d46d1ee3 48bf719e a0edf061 
+  aad was   : 00000000 00000000 00000000 00000006
+  decr.TMSI : 00000006 
+
+==> State: SEND_TMSI_ACK
+Sending 'AssignTMSI-ack':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 5f3449f4 f1612bb0 60f6ef09 022bb89b
+  ciphertext: 6d6f0e18 461623bc a11287a0 a19f01bc 3d3bc2c1 
+  aad was   : 00000000 00000000 00000000 00000006
+  decr.TMSI : 00000006 
+
+==> State: DONE
+
+DEMO-AKA sequence successfully completed on USIM side!
+
+==========<<<  New DEMO-AKA run  >>>==================================================
+
+==> State: INIT
+USIM initialized (test set: 7):
+  IMSI: 00000000 00000000 00000000 00000007
+  K   : 2d609d4d b0ac5bf0 d2c0de26 7014de0d
+  OPc : c35a0ab0 bcbfc925 2caff15f 24efbde0
+
+==> State: SEND_ID
+Sending 'SendIdentity':
+  IMSI: 00000000 00000000 00000000 00000007
+
+==> State: WAIT_FOR_CHALLENGE
+Received 'Challenge':
+  RAND: 194aa756 013896b7 4b4a2a3b 0af4539e
+  AUTN: 00000000 00005f67 00000000 00000000
+    MSQN: 00000000 0000
+    AMF : 5f67
+    MACA: 00000000 00000000 
+
+Computed values:
+  MAC-A : 00000000 00000000 
+  RES   : 00000000 00000000 
+  CK    : 00000000 00000000 00000000 00000000
+  IK    : 00000000 00000000 00000000 00000000
+  AK    : 00000000 0000
+
+==> State: SEND_RESPONSE
+Sending 'Response':
+  RES: 00000000 00000000 
+
+==> State: WAIT_FOR_TMSI
+Received 'AssignTMSI':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 25b1320d 2c0f1f96 df79acca eb6b0f40
+  ciphertext: 738ecd06 49164ee4 9951eba6 73e49244 d11451e1 
+  aad was   : 00000000 00000000 00000000 00000007
+  decr.TMSI : 00000007 
+
+==> State: SEND_TMSI_ACK
+Sending 'AssignTMSI-ack':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : b775a865 1b7e45e4 6ffb6dbe 62644b23
+  ciphertext: 555749a3 91d9075f a3630571 178001bd 0edbb3bc 
+  aad was   : 00000000 00000000 00000000 00000007
+  decr.TMSI : 00000007 
+
+==> State: DONE
+
+DEMO-AKA sequence successfully completed on USIM side!
+
+==========<<<  New DEMO-AKA run  >>>==================================================
+
+==> State: INIT
+USIM initialized (test set: 8):
+  IMSI: 00000000 00000000 00000000 00000008
+  K   : a530a7fe 428fad10 82c45edd fce13884
+  OPc : 27953e49 bc8af6dc c6e730eb 80286be3
+
+==> State: SEND_ID
+Sending 'SendIdentity':
+  IMSI: 00000000 00000000 00000000 00000008
+
+==> State: WAIT_FOR_CHALLENGE
+Received 'Challenge':
+  RAND: 3a4c2b32 45c50eb5 c71d0863 9395764d
+  AUTN: 00000000 0000b90e 00000000 00000000
+    MSQN: 00000000 0000
+    AMF : b90e
+    MACA: 00000000 00000000 
+
+Computed values:
+  MAC-A : 00000000 00000000 
+  RES   : 00000000 00000000 
+  CK    : 00000000 00000000 00000000 00000000
+  IK    : 00000000 00000000 00000000 00000000
+  AK    : 00000000 0000
+
+==> State: SEND_RESPONSE
+Sending 'Response':
+  RES: 00000000 00000000 
+
+==> State: WAIT_FOR_TMSI
+Received 'AssignTMSI':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 836930be 0002ca1d 5f52888c a89af98e
+  ciphertext: 67464beb 4e85fea6 a80f9e5a f5f14b72 0ee630c3 
+  aad was   : 00000000 00000000 00000000 00000008
+  decr.TMSI : 00000008 
+
+==> State: SEND_TMSI_ACK
+Sending 'AssignTMSI-ack':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 3ec9e812 a4361ca8 822cc8c2 891654c0
+  ciphertext: 37bcc0ff c38e2381 5419c498 1c9ffdfc d2189b81 
+  aad was   : 00000000 00000000 00000000 00000008
+  decr.TMSI : 00000008 
+
+==> State: DONE
+
+DEMO-AKA sequence successfully completed on USIM side!
+
+==========<<<  New DEMO-AKA run  >>>==================================================
+
+==> State: INIT
+USIM initialized (test set: 9):
+  IMSI: 00000000 00000000 00000000 00000009
+  K   : d9151cf0 4896e258 30bf2e08 267b8360
+  OPc : c4c93eff e8a08138 c203d4c2 7ce4e3d9
+
+==> State: SEND_ID
+Sending 'SendIdentity':
+  IMSI: 00000000 00000000 00000000 00000009
+
+==> State: WAIT_FOR_CHALLENGE
+Received 'Challenge':
+  RAND: f761e5e9 3d603feb 730e2755 6cb8a2ca
+  AUTN: 00000000 00009113 00000000 00000000
+    MSQN: 00000000 0000
+    AMF : 9113
+    MACA: 00000000 00000000 
+
+Computed values:
+  MAC-A : 00000000 00000000 
+  RES   : 00000000 00000000 
+  CK    : 00000000 00000000 00000000 00000000
+  IK    : 00000000 00000000 00000000 00000000
+  AK    : 00000000 0000
+
+==> State: SEND_RESPONSE
+Sending 'Response':
+  RES: 00000000 00000000 
+
+==> State: WAIT_FOR_TMSI
+Received 'AssignTMSI':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 0f7a3c05 476d623f a288d874 a2f47276
+  ciphertext: 1a01d6b1 78cc360a 4484ac4c 6ec7e262 503d7b59 
+  aad was   : 00000000 00000000 00000000 00000009
+  decr.TMSI : 00000009 
+
+==> State: SEND_TMSI_ACK
+Sending 'AssignTMSI-ack':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 5429088d e40dd789 1cdcc02f 091dc3b0
+  ciphertext: df057669 10f0690c 042efbd3 07dbe348 00938d38 
+  aad was   : 00000000 00000000 00000000 00000009
+  decr.TMSI : 00000009 
+
+==> State: DONE
+
+DEMO-AKA sequence successfully completed on USIM side!
+
+==========<<<  New DEMO-AKA run  >>>==================================================
+
+==> State: INIT
+USIM initialized (test set: 10):
+  IMSI: 00000000 00000000 00000000 0000000a
+  K   : a0e2971b 6822e8d3 54a18cc2 35624ecb
+  OPc : 82a26f22 bba9e948 8f949a10 d98e9cc4
+
+==> State: SEND_ID
+Sending 'SendIdentity':
+  IMSI: 00000000 00000000 00000000 0000000a
+
+==> State: WAIT_FOR_CHALLENGE
+Received 'Challenge':
+  RAND: 08eff828 b13fdb56 2722c65c 7f30a9b2
+  AUTN: 00000000 0000716b 00000000 00000000
+    MSQN: 00000000 0000
+    AMF : 716b
+    MACA: 00000000 00000000 
+
+Computed values:
+  MAC-A : 00000000 00000000 
+  RES   : 00000000 00000000 
+  CK    : 00000000 00000000 00000000 00000000
+  IK    : 00000000 00000000 00000000 00000000
+  AK    : 00000000 0000
+
+==> State: SEND_RESPONSE
+Sending 'Response':
+  RES: 00000000 00000000 
+
+==> State: WAIT_FOR_TMSI
+Received 'AssignTMSI':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 3108a9cf 13833432 5bd95639 a29e5270
+  ciphertext: 59846cbf b595d23f 0783424c 1bf2282e 0e2e72cf 
+  aad was   : 00000000 00000000 00000000 0000000a
+  decr.TMSI : 0000000a 
+
+==> State: SEND_TMSI_ACK
+Sending 'AssignTMSI-ack':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 575ea443 d2de3210 fd48e129 fbed20d7
+  ciphertext: 93609891 7d9972f0 eeed859f d6750f4d 80d4b432 
+  aad was   : 00000000 00000000 00000000 0000000a
+  decr.TMSI : 0000000a 
+
+==> State: DONE
+
+DEMO-AKA sequence successfully completed on USIM side!
+
+==========<<<  New DEMO-AKA run  >>>==================================================
+
+==> State: INIT
+USIM initialized (test set: 11):
+  IMSI: 00000000 00000000 00000000 0000000b
+  K   : 0da6f7ba 86d5eac8 a19cf563 ac58642d
+  OPc : 0db1071f 8767562c a43a0a64 c41e8d08
+
+==> State: SEND_ID
+Sending 'SendIdentity':
+  IMSI: 00000000 00000000 00000000 0000000b
+
+==> State: WAIT_FOR_CHALLENGE
+Received 'Challenge':
+  RAND: 679ac4db acd7d233 ff9d6806 f4149ce3
+  AUTN: 00000000 0000224a 00000000 00000000
+    MSQN: 00000000 0000
+    AMF : 224a
+    MACA: 00000000 00000000 
+
+Computed values:
+  MAC-A : 00000000 00000000 
+  RES   : 00000000 00000000 
+  CK    : 00000000 00000000 00000000 00000000
+  IK    : 00000000 00000000 00000000 00000000
+  AK    : 00000000 0000
+
+==> State: SEND_RESPONSE
+Sending 'Response':
+  RES: 00000000 00000000 
+
+==> State: WAIT_FOR_TMSI
+Received 'AssignTMSI':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 9a0e8fb3 1d874733 496be89e af023cca
+  ciphertext: 1d4922fb b7f91204 72395720 4a4d1a4f 87bf3da5 
+  aad was   : 00000000 00000000 00000000 0000000b
+  decr.TMSI : 0000000b 
+
+==> State: SEND_TMSI_ACK
+Sending 'AssignTMSI-ack':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : b82a3462 a7aa4bc8 d640cf71 48664a34
+  ciphertext: 58aeda03 03f721e4 a564eb77 2119279b fc16c068 
+  aad was   : 00000000 00000000 00000000 0000000b
+  decr.TMSI : 0000000b 
+
+==> State: DONE
+
+DEMO-AKA sequence successfully completed on USIM side!
+
+==========<<<  New DEMO-AKA run  >>>==================================================
+
+==> State: INIT
+USIM initialized (test set: 12):
+  IMSI: 00000000 00000000 00000000 0000000c
+  K   : 77b45843 c88e58c1 0d202684 515ed430
+  OPc : d483afae 562409a3 26b5bb0b 20c4d762
+
+==> State: SEND_ID
+Sending 'SendIdentity':
+  IMSI: 00000000 00000000 00000000 0000000c
+
+==> State: WAIT_FOR_CHALLENGE
+Received 'Challenge':
+  RAND: 4c47eb30 76dc55fe 5106cb20 34b8cd78
+  AUTN: 00000000 0000ad25 00000000 00000000
+    MSQN: 00000000 0000
+    AMF : ad25
+    MACA: 00000000 00000000 
+
+Computed values:
+  MAC-A : 00000000 00000000 
+  RES   : 00000000 00000000 
+  CK    : 00000000 00000000 00000000 00000000
+  IK    : 00000000 00000000 00000000 00000000
+  AK    : 00000000 0000
+
+==> State: SEND_RESPONSE
+Sending 'Response':
+  RES: 00000000 00000000 
+
+==> State: WAIT_FOR_TMSI
+Received 'AssignTMSI':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : ca10886c 68ff98ee 1bcbd030 959dcf7d
+  ciphertext: 8690cf95 d1ff7fd4 c7938052 f3e677ce b7d6382c 
+  aad was   : 00000000 00000000 00000000 0000000c
+  decr.TMSI : 0000000c 
+
+==> State: SEND_TMSI_ACK
+Sending 'AssignTMSI-ack':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 44cf4db0 673c82c7 ec8cd17e 482b7d46
+  ciphertext: 2770b593 4cddfa5c ab9f87cd a3e8f902 1a0ffd9e 
+  aad was   : 00000000 00000000 00000000 0000000c
+  decr.TMSI : 0000000c 
+
+==> State: DONE
+
+DEMO-AKA sequence successfully completed on USIM side!
+
+==========<<<  New DEMO-AKA run  >>>==================================================
+
+==> State: INIT
+USIM initialized (test set: 13):
+  IMSI: 00000000 00000000 00000000 0000000d
+  K   : 729b1772 9270dd87 ccdf1bfe 29b4e9bb
+  OPc : 228c2f2f 06ac3268 a9e616ee 16db4ba1
+
+==> State: SEND_ID
+Sending 'SendIdentity':
+  IMSI: 00000000 00000000 00000000 0000000d
+
+==> State: WAIT_FOR_CHALLENGE
+Received 'Challenge':
+  RAND: 311c4c92 9744d675 b720f3b7 e9b1cbd0
+  AUTN: 00000000 00005bb2 00000000 00000000
+    MSQN: 00000000 0000
+    AMF : 5bb2
+    MACA: 00000000 00000000 
+
+Computed values:
+  MAC-A : 00000000 00000000 
+  RES   : 00000000 00000000 
+  CK    : 00000000 00000000 00000000 00000000
+  IK    : 00000000 00000000 00000000 00000000
+  AK    : 00000000 0000
+
+==> State: SEND_RESPONSE
+Sending 'Response':
+  RES: 00000000 00000000 
+
+==> State: WAIT_FOR_TMSI
+Received 'AssignTMSI':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : d715ebc6 613f9def 317f03ee ce60fee6
+  ciphertext: fc485c36 bdfa49b0 0142a382 b4652024 b4318d1e 
+  aad was   : 00000000 00000000 00000000 0000000d
+  decr.TMSI : 0000000d 
+
+==> State: SEND_TMSI_ACK
+Sending 'AssignTMSI-ack':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : c9ebeb89 6c98a4e5 aab89d39 05d1b19f
+  ciphertext: 09b98244 2f2eb45c 7054e405 d062d894 918b6a7c 
+  aad was   : 00000000 00000000 00000000 0000000d
+  decr.TMSI : 0000000d 
+
+==> State: DONE
+
+DEMO-AKA sequence successfully completed on USIM side!
+
+==========<<<  New DEMO-AKA run  >>>==================================================
+
+==> State: INIT
+USIM initialized (test set: 14):
+  IMSI: 00000000 00000000 00000000 0000000e
+  K   : d32dd23e 89dc6623 54ca12eb 79dd32fa
+  OPc : d22a4b41 80a53257 08a5ff70 d9f67ec7
+
+==> State: SEND_ID
+Sending 'SendIdentity':
+  IMSI: 00000000 00000000 00000000 0000000e
+
+==> State: WAIT_FOR_CHALLENGE
+Received 'Challenge':
+  RAND: cf7d0ab1 d9430695 0bf12018 fbd46887
+  AUTN: 00000000 0000b5e6 00000000 00000000
+    MSQN: 00000000 0000
+    AMF : b5e6
+    MACA: 00000000 00000000 
+
+Computed values:
+  MAC-A : 00000000 00000000 
+  RES   : 00000000 00000000 
+  CK    : 00000000 00000000 00000000 00000000
+  IK    : 00000000 00000000 00000000 00000000
+  AK    : 00000000 0000
+
+==> State: SEND_RESPONSE
+Sending 'Response':
+  RES: 00000000 00000000 
+
+==> State: WAIT_FOR_TMSI
+Received 'AssignTMSI':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : ac0c2c3b f116e7ca d859e632 42ba0464
+  ciphertext: 997a9a8a e1ccf621 3fde2cfd 7488aafd 2d576e2f 
+  aad was   : 00000000 00000000 00000000 0000000e
+  decr.TMSI : 0000000e 
+
+==> State: SEND_TMSI_ACK
+Sending 'AssignTMSI-ack':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 1d5fae7d 9b3c6348 2e0ecabb f63b1ff8
+  ciphertext: 6fb0e2b7 439f8e0b 8ccac109 ed377158 1e7c5c1e 
+  aad was   : 00000000 00000000 00000000 0000000e
+  decr.TMSI : 0000000e 
+
+==> State: DONE
+
+DEMO-AKA sequence successfully completed on USIM side!
+
+==========<<<  New DEMO-AKA run  >>>==================================================
+
+==> State: INIT
+USIM initialized (test set: 15):
+  IMSI: 00000000 00000000 00000000 0000000f
+  K   : af7c65e1 927221de 591187a2 c5987a53
+  OPc : a4cf5c81 55c08a7e ff418e54 43b98e55
+
+==> State: SEND_ID
+Sending 'SendIdentity':
+  IMSI: 00000000 00000000 00000000 0000000f
+
+==> State: WAIT_FOR_CHALLENGE
+Received 'Challenge':
+  RAND: 1f0f8578 464fd59b 64bed2d0 9436b57a
+  AUTN: 00000000 000084f6 00000000 00000000
+    MSQN: 00000000 0000
+    AMF : 84f6
+    MACA: 00000000 00000000 
+
+Computed values:
+  MAC-A : 00000000 00000000 
+  RES   : 00000000 00000000 
+  CK    : 00000000 00000000 00000000 00000000
+  IK    : 00000000 00000000 00000000 00000000
+  AK    : 00000000 0000
+
+==> State: SEND_RESPONSE
+Sending 'Response':
+  RES: 00000000 00000000 
+
+==> State: WAIT_FOR_TMSI
+Received 'AssignTMSI':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 5394cf10 52939181 9aca8acb 367f190d
+  ciphertext: dfb75a72 a4dc78ff 5f1e3f20 084aafeb c027c080 
+  aad was   : 00000000 00000000 00000000 0000000f
+  decr.TMSI : 0000000f 
+
+==> State: SEND_TMSI_ACK
+Sending 'AssignTMSI-ack':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : b00310c7 218bde59 93b27639 994bb2d2
+  ciphertext: 6332240e dcedf6e4 3b73373c ec5d7c38 62e9e6b5 
+  aad was   : 00000000 00000000 00000000 0000000f
+  decr.TMSI : 0000000f 
+
+==> State: DONE
+
+DEMO-AKA sequence successfully completed on USIM side!
+
+==========<<<  New DEMO-AKA run  >>>==================================================
+
+==> State: INIT
+USIM initialized (test set: 16):
+  IMSI: 00000000 00000000 00000000 00000010
+  K   : 5bd7ecd3 d3127a41 d12539be d4e7cf71
+  OPc : 76089d3c 0ff3efdc 6e36721d 4fceb747
+
+==> State: SEND_ID
+Sending 'SendIdentity':
+  IMSI: 00000000 00000000 00000000 00000010
+
+==> State: WAIT_FOR_CHALLENGE
+Received 'Challenge':
+  RAND: 59b75f14 251c7503 1d0bcbac 1c2c04c7
+  AUTN: 00000000 0000d056 00000000 00000000
+    MSQN: 00000000 0000
+    AMF : d056
+    MACA: 00000000 00000000 
+
+Computed values:
+  MAC-A : 00000000 00000000 
+  RES   : 00000000 00000000 
+  CK    : 00000000 00000000 00000000 00000000
+  IK    : 00000000 00000000 00000000 00000000
+  AK    : 00000000 0000
+
+==> State: SEND_RESPONSE
+Sending 'Response':
+  RES: 00000000 00000000 
+
+==> State: WAIT_FOR_TMSI
+Received 'AssignTMSI':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 784ad2d1 aeb61d63 b06a5e6c fd7850f5
+  ciphertext: 8906e03c db154a14 093b9d42 b6e8ea72 151d9aa1 
+  aad was   : 00000000 00000000 00000000 00000010
+  decr.TMSI : 00000010 
+
+==> State: SEND_TMSI_ACK
+Sending 'AssignTMSI-ack':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : cc96997d 9fe1eafd ef493359 18052100
+  ciphertext: e2f2023d a1f86204 7e4d71d9 86959f06 b7c6e095 
+  aad was   : 00000000 00000000 00000000 00000010
+  decr.TMSI : 00000010 
+
+==> State: DONE
+
+DEMO-AKA sequence successfully completed on USIM side!
+
+==========<<<  New DEMO-AKA run  >>>==================================================
+
+==> State: INIT
+USIM initialized (test set: 17):
+  IMSI: 00000000 00000000 00000000 00000011
+  K   : 6cd1c6ce b1e01e14 f1b82316 a90b7f3d
+  OPc : a219dc37 f1dc7d66 738b5843 c799f206
+
+==> State: SEND_ID
+Sending 'SendIdentity':
+  IMSI: 00000000 00000000 00000000 00000011
+
+==> State: WAIT_FOR_CHALLENGE
+Received 'Challenge':
+  RAND: f69b78f3 00a0568b ce9f0cb9 3c4be4c9
+  AUTN: 00000000 0000e4bb 00000000 00000000
+    MSQN: 00000000 0000
+    AMF : e4bb
+    MACA: 00000000 00000000 
+
+Computed values:
+  MAC-A : 00000000 00000000 
+  RES   : 00000000 00000000 
+  CK    : 00000000 00000000 00000000 00000000
+  IK    : 00000000 00000000 00000000 00000000
+  AK    : 00000000 0000
+
+==> State: SEND_RESPONSE
+Sending 'Response':
+  RES: 00000000 00000000 
+
+==> State: WAIT_FOR_TMSI
+Received 'AssignTMSI':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 07b52f8a d5cb8ae4 1403e231 91c252fd
+  ciphertext: 0b9b6613 6bcc16ff 243357dd 7fe5cc41 d88c7c16 
+  aad was   : 00000000 00000000 00000000 00000011
+  decr.TMSI : 00000011 
+
+==> State: SEND_TMSI_ACK
+Sending 'AssignTMSI-ack':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 9744989a dfcf3245 9bf35773 b3369fa5
+  ciphertext: a9538908 a593a235 52885f27 0a085044 0c9aa584 
+  aad was   : 00000000 00000000 00000000 00000011
+  decr.TMSI : 00000011 
+
+==> State: DONE
+
+DEMO-AKA sequence successfully completed on USIM side!
+
+==========<<<  New DEMO-AKA run  >>>==================================================
+
+==> State: INIT
+USIM initialized (test set: 18):
+  IMSI: 00000000 00000000 00000000 00000012
+  K   : b73a90cb cf3afb62 2dba83c5 8a8415df
+  OPc : df0c6786 8fa25f74 8b7044c6 e7c245b8
+
+==> State: SEND_ID
+Sending 'SendIdentity':
+  IMSI: 00000000 00000000 00000000 00000012
+
+==> State: WAIT_FOR_CHALLENGE
+Received 'Challenge':
+  RAND: b120f1c1 a0102a2f 507dd543 de68281f
+  AUTN: 00000000 0000471b 00000000 00000000
+    MSQN: 00000000 0000
+    AMF : 471b
+    MACA: 00000000 00000000 
+
+Computed values:
+  MAC-A : 00000000 00000000 
+  RES   : 00000000 00000000 
+  CK    : 00000000 00000000 00000000 00000000
+  IK    : 00000000 00000000 00000000 00000000
+  AK    : 00000000 0000
+
+==> State: SEND_RESPONSE
+Sending 'Response':
+  RES: 00000000 00000000 
+
+==> State: WAIT_FOR_TMSI
+Received 'AssignTMSI':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 1af4770d a7b2096e 760431eb fcd0eb80
+  ciphertext: 247202e9 54fe414e 294fc8d6 e6f1ed1e d91e1c50 
+  aad was   : 00000000 00000000 00000000 00000012
+  decr.TMSI : 00000012 
+
+==> State: SEND_TMSI_ACK
+Sending 'AssignTMSI-ack':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : b58d902a 610da975 d59ffe68 b0a972ed
+  ciphertext: 4fe11846 b2a8088b c45cdc35 9a890371 f1f25467 
+  aad was   : 00000000 00000000 00000000 00000012
+  decr.TMSI : 00000012 
+
+==> State: DONE
+
+DEMO-AKA sequence successfully completed on USIM side!
+
+==========<<<  New DEMO-AKA run  >>>==================================================
+
+==> State: INIT
+USIM initialized (test set: 19):
+  IMSI: 00000000 00000000 00000000 00000013
+  K   : 51222502 14c33e72 3a5dd523 fc145fc0
+  OPc : 981d464c 7c52eb6e 50362349 84ad0bcf
+
+==> State: SEND_ID
+Sending 'SendIdentity':
+  IMSI: 00000000 00000000 00000000 00000013
+
+==> State: WAIT_FOR_CHALLENGE
+Received 'Challenge':
+  RAND: 81e92b6c 0ee0e12e bceba8d9 2a99dfa5
+  AUTN: 00000000 0000c3ab 00000000 00000000
+    MSQN: 00000000 0000
+    AMF : c3ab
+    MACA: 00000000 00000000 
+
+Computed values:
+  MAC-A : 00000000 00000000 
+  RES   : 00000000 00000000 
+  CK    : 00000000 00000000 00000000 00000000
+  IK    : 00000000 00000000 00000000 00000000
+  AK    : 00000000 0000
+
+==> State: SEND_RESPONSE
+Sending 'Response':
+  RES: 00000000 00000000 
+
+==> State: WAIT_FOR_TMSI
+Received 'AssignTMSI':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 4d1c881f 09341adf 82bc4232 ed57820b
+  ciphertext: 9ed7d9ab bd11a09e 442f4e1d 777ccf04 92a9aa65 
+  aad was   : 00000000 00000000 00000000 00000013
+  decr.TMSI : 00000013 
+
+==> State: SEND_TMSI_ACK
+Sending 'AssignTMSI-ack':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 53a88dfe 273bc17e 8664b7e1 fc1a5c6e
+  ciphertext: 2f4f4e0d 7e7bf1c0 cb9bddbf 25746928 6f48cac0 
+  aad was   : 00000000 00000000 00000000 00000013
+  decr.TMSI : 00000013 
+
+==> State: DONE
+
+DEMO-AKA sequence successfully completed on USIM side!
+
+==========<<<  New DEMO-AKA run  >>>==================================================
+
+==> State: INIT
+USIM initialized (test set: 20):
+  IMSI: 00000000 00000000 00000000 00000014
+  K   : 90dca4ed a45b53cf 0f12d7c9 c3bc6a89
+  OPc : cb9cccc4 b9258e6d ca476037 9fb82581
+
+==> State: SEND_ID
+Sending 'SendIdentity':
+  IMSI: 00000000 00000000 00000000 00000014
+
+==> State: WAIT_FOR_CHALLENGE
+Received 'Challenge':
+  RAND: 9fddc720 92c6ad03 6b6e4647 89315b78
+  AUTN: 00000000 000061df 00000000 00000000
+    MSQN: 00000000 0000
+    AMF : 61df
+    MACA: 00000000 00000000 
+
+Computed values:
+  MAC-A : 00000000 00000000 
+  RES   : 00000000 00000000 
+  CK    : 00000000 00000000 00000000 00000000
+  IK    : 00000000 00000000 00000000 00000000
+  AK    : 00000000 0000
+
+==> State: SEND_RESPONSE
+Sending 'Response':
+  RES: 00000000 00000000 
+
+==> State: WAIT_FOR_TMSI
+Received 'AssignTMSI':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : 19f45a73 136d86b9 bcf6b255 40823d5e
+  ciphertext: e96bc671 f336d2bd 074df6b8 879996ec c00da16f 
+  aad was   : 00000000 00000000 00000000 00000014
+  decr.TMSI : 00000014 
+
+==> State: SEND_TMSI_ACK
+Sending 'AssignTMSI-ack':
+  Key       : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+  nonce     : c44a1629 46564af4 a9632fdf 1e59f0c3
+  ciphertext: 11a13805 37e50850 4137acf3 58653eb5 757f482f 
+  aad was   : 00000000 00000000 00000000 00000014
+  decr.TMSI : 00000014 
+
+==> State: DONE
+
+DEMO-AKA sequence successfully completed on USIM side!
+
+USIM done.
