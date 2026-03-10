@@ -1,3 +1,5 @@
 .venv
 .idea
 *.PEM
+/__pycache__/
+*.pyc
