@@ -18,11 +18,11 @@ from milenage_aka import Milenage
 hsock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 usock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 usock.settimeout(SOCK_TIMEOUT)
-usock.bind(USIM_ADDR)
+usock.bind(LOCAL_USIM_ADDR)
 
 
 def sendto_home(msg: bytes) -> int:
-    return hsock.sendto(msg, HOME_ADDR)
+    return hsock.sendto(msg, REMOTE_HOME_ADDR)
 
 def recvfrom_home() -> bytes:
     try:
