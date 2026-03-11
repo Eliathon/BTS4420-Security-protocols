@@ -1,11 +1,16 @@
-UDP_IP = "127.0.0.1"        # We *only* use internal datagram exchange (this is "localhost")
+LOCAL_IP = "172.16.16.173"       # We only use internal datagram exchange (this is "localhost")
+PEER_IP = "172.16.16.132"
+
 HOME_UDP_PORT = 5005        # The exact port's can be changed. But: only to ephemeral ones. 
 USIM_UDP_PORT = 5006
 SOCK_TIMEOUT  = 10          # Socket timeout in seconds. May be changed (if needed).
 DGRAM_BUFF    = 1024        # The max.size of a single datagram. 
 
-USIM_ADDR = (UDP_IP, USIM_UDP_PORT)
-HOME_ADDR = (UDP_IP, HOME_UDP_PORT)
+LOCAL_HOME_ADDR = (LOCAL_IP, HOME_UDP_PORT)
+LOCAL_USIM_ADDR = (LOCAL_IP, USIM_UDP_PORT)
+
+REMOTE_HOME_ADDR = (PEER_IP, HOME_UDP_PORT)
+REMOTE_USIM_ADDR = (PEER_IP, USIM_UDP_PORT)
 
 
 PID = 0xF00D.to_bytes(2)

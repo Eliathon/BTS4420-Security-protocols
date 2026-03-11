@@ -18,12 +18,12 @@ from helpers import xor
 
 hsock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 hsock.settimeout(SOCK_TIMEOUT)
-hsock.bind(HOME_ADDR)
+hsock.bind(LOCAL_HOME_ADDR)
 usock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 
 def sendto_usim(msg: bytes) -> int:
-    return usock.sendto(msg, USIM_ADDR)
+    return usock.sendto(msg, REMOTE_USIM_ADDR)
 
 
 def recvfrom_usim() -> bytes:
@@ -31,7 +31,7 @@ def recvfrom_usim() -> bytes:
         data, addr = hsock.recvfrom(DGRAM_BUFF)
     except TimeoutError:
         data = bytes()
-
+        
     # Normally, we should have checked 'addr'
     return data
 
