@@ -1,20 +1,23 @@
 """
-USIM side of DEMO-AKA: state-machine only (w/message syntax check).
+Implements USIM side of the DEMO-AKA protocol.
+USIM identifies itself to HOME and verifies the challenge with milenage,
+sends back a response to prove its identity and receives a TMSI.
 
 That is, we have also included:
     - the basic AESGCM encryption/decryption.
     - load the TS 35.208 conformance test sets
-
 """
 import socket
 import secrets
-from enum import Enum, auto
+from enum import auto
 from demo_aka_util import *
 from demo_aka_cipher import AEAD_encrypt, AEAD_decrypt
 from conformance_test_data import TestData, b2a
 from milenage_aka import Milenage
 
 
+# USIM sends outgoing messages to HOME
+# and listens for incoming messages on its own port
 hsock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 usock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 usock.settimeout(SOCK_TIMEOUT)
@@ -22,9 +25,12 @@ usock.bind(LOCAL_USIM_ADDR)
 
 
 def sendto_home(msg: bytes) -> int:
+    # Send a UDP datagram to HOME
     return hsock.sendto(msg, REMOTE_HOME_ADDR)
 
 def recvfrom_home() -> bytes:
+    # Receive UDP datagram from HOME.
+    # Returns empty bytes on timeout
     try:
         data, addr = usock.recvfrom(DGRAM_BUFF)
     except TimeoutError:
@@ -34,6 +40,9 @@ def recvfrom_home() -> bytes:
     return data
 
 
+# Message syntax validators
+# Each checks length, then the PID+MID header bytes.
+# Returns (True, "Syntax OK") or (False, <reason>).
 def verify_Challenge_syntax(data: bytes):
     if len(data) ==  0: return (False,"No message received.")
     if len(data) != 36: return (False,"Wrong message length: "+str(len(data))+" (expected lenght: 36)")
@@ -72,7 +81,7 @@ def run_USIM_state_machine(IMSI: bytes, K: bytes, OPc: bytes) -> bool:
         if  state == State.INIT:
             new_run()
             at(state)
-            test_set_no = IMSI[-1]
+            test_set_no = IMSI[-1] # test-set index
             print("USIM initialized (test set:",str(test_set_no)+"):")
             print("  IMSI:",b2a(IMSI))
             print("  K   :",b2a(K))
@@ -101,6 +110,8 @@ def run_USIM_state_machine(IMSI: bytes, K: bytes, OPc: bytes) -> bool:
                 MACA = AUTN[8:16]
                 print_challenge_data("Received 'Challenge':",RAND,AUTN,MSQN,AMF,MACA)
 
+                # compute_w_masked_sqn() runs f5 first to unmask SQN,
+                # then computes the rest of the functions in the expected order.
                 milenage = Milenage(K,OPc)
                 milenage.compute_w_masked_sqn(RAND,MSQN,AMF)
 
@@ -110,10 +121,10 @@ def run_USIM_state_machine(IMSI: bytes, K: bytes, OPc: bytes) -> bool:
                     print("Too bad -- the challenge was *invalid*!!")
                     state = State.ERROR
                 else:
-                    RES = milenage.f2()
-                    CK = milenage.f3()
-                    IK = milenage.f4()
-                    AK = milenage.f5()
+                    RES = milenage.f2() # RES: response to prove USIM identity
+                    CK = milenage.f3() # CK: cipher key
+                    IK = milenage.f4() # IK: integrity key
+                    AK = milenage.f5() # AK: anonymity key
                     print_computed_values(MACA,RES,CK,IK,AK)
                     state = State.SEND_RESPONSE
             else:
@@ -184,7 +195,7 @@ if __name__ == "__main__":
 
     ok = False
     for ix in range(1,21):
-        IMSI[-1] = ix
+        IMSI[-1] = ix # sets test-set index
         K,OPc = cred.get_data(ix)
         ok = run_USIM_state_machine(bytes(IMSI), K, OPc)
         if not ok: break

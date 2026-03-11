@@ -1,4 +1,4 @@
-LOCAL_IP = "172.16.16.173"       # We only use internal datagram exchange (this is "localhost")
+LOCAL_IP = "172.16.16.173"       # Had to be changed for testing
 PEER_IP = "172.16.16.132"
 
 HOME_UDP_PORT = 5005        # The exact port's can be changed. But: only to ephemeral ones. 
